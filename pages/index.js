@@ -12,7 +12,7 @@ export default function Home({ articles }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
-      <main>
+      <main className="mx-auto">
         {articles.map(
           ({
             title,

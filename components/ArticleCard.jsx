@@ -1,5 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function ArticleCard({
   title,
@@ -11,70 +12,64 @@ export default function ArticleCard({
   readingTime,
 }) {
   return (
-    <div>
-      <section className='text-gray-600 body-font'>
-        <div className='container px-5 py-24 mx-auto'>
-          <div className='flex flex-wrap -m-4'>
-            <div className='p-4 md:w-1/3'>
-              <div className='h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
-                <Image
-                  className='lg:h-48 md:h-36 w-full object-cover object-center'
-                  src={image}
-                  width={720}
-                  height={400}
-                  alt='blog'
-                />
-                <div className='p-6'>
-                  <h2 className='tracking-widest text-xs title-font font-medium text-gray-400 mb-1'>
-                    {category}
-                  </h2>
-                  <h1 className='title-font text-lg font-medium text-gray-900 mb-3'>
-                    {title}
-                  </h1>
-                  <p className='leading-relaxed mb-3'>{description}</p>
-                  <div className='flex items-center flex-wrap '>
-                    <a
-                      href={`/article/${slug}`}
-                      className='text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0'
-                    >
-                      Read More
-                      <svg
-                        className='w-4 h-4 ml-2'
-                        viewBox='0 0 24 24'
-                        stroke='currentColor'
-                        strokeWidth='2'
-                        fill='none'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                      >
-                        <path d='M5 12h14'></path>
-                        <path d='M12 5l7 7-7 7'></path>
-                      </svg>
-                    </a>
-                    <span className='text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200'>
-                      {readingTime}
-                    </span>
-                    <span className='text-gray-400 inline-flex items-center leading-none text-sm'>
-                      <svg
-                        className='w-4 h-4 mr-1'
-                        stroke='currentColor'
-                        strokeWidth='2'
-                        fill='none'
-                        strokeLinecap='round'
-                        strokeinejoin='round'
-                        viewBox='0 0 24 24'
-                      >
-                        <path d='M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z'></path>
-                      </svg>
-                      {dateTime}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="dark:bg-gray-800 dark:text-gray-50 flex flex-row rounded-lg overflow-hidden">
+      <Image
+        className="lg:h-48 md:h-36 w-full object-cover object-center "
+        src={image}
+        width={720}
+        height={400}
+        alt="blog"
+      />
+      <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
+        <div className="flex justify-start">
+          <span className="px-2 py-1 text-xs rounded-full dark:bg-green-400 dark:text-gray-900">
+            Label
+          </span>
         </div>
-      </section>
+        <h1 className="text-3xl font-semibold">Lorem ipsum dolor sit.</h1>
+        <p className="flex-1 pt-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+          reprehenderit adipisci tempore voluptas laborum quod.
+        </p>
+        <a
+          rel="noopener noreferrer"
+          href="#"
+          className="inline-flex items-center pt-2 pb-6 space-x-2 text-sm dark:text-green-400"
+        >
+          <span>Read more</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="w-4 h-4"
+          >
+            <path
+              fillRule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+        </a>
+        <div className="flex items-center justify-between pt-2">
+          <div className="flex space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="w-5 h-5 dark:text-gray-400"
+            >
+              <path
+                fillRule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+            <span className="self-center text-sm">by Leroy Jenkins</span>
+          </div>
+          <span className="text-xs">3 min read</span>
+        </div>
+        {/* </div> */}
+      </div>
     </div>
   );
 }
