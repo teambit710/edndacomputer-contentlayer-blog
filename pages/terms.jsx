@@ -3,15 +3,15 @@ import React from "react";
 const terms = () => {
   return (
     <section>
-      <div class="px-4 py-24 mb-20 text-left bg-gray-50 md:text-center">
-        <h1 class="mb-4 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
+      <div className="px-4 py-24 mb-20 text-left bg-gray-50 md:text-center">
+        <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
           Terms & Conditions
         </h1>
-        <p class="text-base text-gray-500 md:text-lg">
+        <p className="text-base text-gray-500 md:text-lg">
           Last updated: 20th Dec 2020
         </p>
       </div>
-      <div class="px-4 pb-20 mx-auto prose">
+      <div className="px-4 pb-20 mx-auto prose">
         <h2 id="1legalnotices">1. Legal Notices</h2>
 
         <p>

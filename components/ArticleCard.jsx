@@ -49,6 +49,7 @@ export default function ArticleCard({
                 <img
                   className="h-full w-full rounded-full object-cover object-center ring-2 ring-transparent dark:ring-primary-light p-0.5"
                   src={"/images/avatar.jpg"}
+                  alt="avatar"
                 />
               </div>
               <div className="flex flex-col pl-2">

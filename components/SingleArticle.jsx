@@ -10,21 +10,13 @@ import {
 
 export const SingleArticle = ({ author, image, category, title, children }) => {
   return (
-    <article
-      class="px-4 py-24 mx-auto max-w-7xl"
-      itemid="#"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="w-full mx-auto mb-10 text-left md:w-3/4 lg:w-1/2">
-        <div class="pb-6 mb-6 border-b border-gray-200">
-          <h1
-            class="mb-3 text-3xl font-bold text-gray-900 md:leading-tight md:text-4xl"
-            itemprop="headline"
-          >
+    <article className="px-4 py-24 mx-auto max-w-7xl">
+      <div className="w-full mx-auto mb-10 text-left w-4/5">
+        <div className="pb-6 mb-6 border-b border-gray-200">
+          <h1 className="mb-3 text-3xl font-bold text-gray-900 md:leading-tight md:text-4xl"s>
             {title}
           </h1>
-          <p class="text-base text-gray-500">
+          <p className="text-base text-gray-500">
             January 18, 2021 — Written by {author.name}
           </p>
         </div>
@@ -59,15 +51,15 @@ export const SingleArticle = ({ author, image, category, title, children }) => {
           </Link>
         </nav>
         <Image
-          className="lg:h-64 md:h-36 w-full object-cover object-center"
+          className=" md:h-36 w-full object-cover object-center"
           src={image}
-          width={720}
-          height={400}
+          width={1440}
+          height={800}
           alt="blog"
         />
       </div>
 
-      <div class="w-full mx-auto prose max-w-7xl">{children}</div>
+      <div className="w-full mx-auto prose max-w-7xl">{children}</div>
     </article>
   );
 };

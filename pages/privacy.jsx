@@ -2,16 +2,16 @@ import React from "react";
 
 const privacy = () => {
   return (
-    <section class="px-4 py-24 mx-auto max-w-7xl">
-      <div class="mb-24 text-left md:text-center">
-        <h1 class="mb-4 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
+    <section className="px-4 py-24 mx-auto max-w-7xl">
+      <div className="mb-24 text-left md:text-center">
+        <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
           Privacy Policy
         </h1>
-        <p class="mb-5 text-base text-gray-500 md:text-lg">
+        <p className="mb-5 text-base text-gray-500 md:text-lg">
           Last updated: 20th Dec 2020
         </p>
       </div>
-      <div class="mx-auto prose">
+      <div className="mx-auto prose">
         <h2 id="1legalnotices">1. Legal Notices</h2>
 
         <p>
