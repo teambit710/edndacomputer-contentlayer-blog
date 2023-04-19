@@ -1,3 +1,11 @@
 {
-  "extends": "next/core-web-vitals"
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "script",
+    "ecmaFeatures": {}
+  },
+  "rules": { "rules": { "react/no-unescaped-entities": 0 } },
+  "env": {
+    "es6": true
+  }
 }
