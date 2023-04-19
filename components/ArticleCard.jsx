@@ -23,7 +23,7 @@ export default function ArticleCard({
       />
       <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-4">
         <div className="flex justify-start">
-          <span class="bg-blue-100 text-primary-dark text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-primary dark:text-gray-50">
+          <span className="bg-blue-100 text-primary-dark text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-primary dark:text-gray-50">
             {category}
           </span>
         </div>
@@ -41,9 +41,9 @@ export default function ArticleCard({
         </Link>
         <div className="flex items-center justify-between pt-2">
           <div className="flex space-x-2">
-            <div class="relative flex h-10 w-10 shrink-0 select-none items-center justify-center rounded-full bg-transparent text-sm font-bold uppercase text-gray-800">
+            <div className="relative flex h-10 w-10 shrink-0 select-none items-center justify-center rounded-full bg-transparent text-sm font-bold uppercase text-gray-800">
               <img
-                class="h-full w-full rounded-full object-cover object-center ring-2 ring-transparent dark:ring-primary-light p-0.5"
+                className="h-full w-full rounded-full object-cover object-center ring-2 ring-transparent dark:ring-primary-light p-0.5"
                 src={"/images/avatar.jpg"}
               />
             </div>

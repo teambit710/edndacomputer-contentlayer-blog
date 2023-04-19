@@ -36,11 +36,11 @@ export const SingleArticle = ({ author, image, category, title, children }) => {
     // </div>
     <article
       className="px-4 py-24 mx-auto max-w-7xl"
-      itemid="#"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
+      itemID="#"
+      itemScope
+      itemType="http://schema.org/BlogPosting"
     >
-      <div className="w-full mx-auto mb-12 text-left w-3/4">
+      <div className="w-full mx-auto mb-12 text-left">
         <Image
           className="lg:h-48 md:h-36 w-full object-cover object-center"
           src={image}
@@ -54,7 +54,7 @@ export const SingleArticle = ({ author, image, category, title, children }) => {
         </p>
         <h1
           className="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl"
-          itemprop="headline"
+          itemProp="headline"
           title="Rise of Tailwind - A Utility First CSS Framework"
         >
           {title}
