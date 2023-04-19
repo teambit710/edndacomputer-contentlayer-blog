@@ -1,96 +1,73 @@
 import Image from "next/image";
+import image from "../public/images/avatar.jpg";
+import Link from "next/link";
+import {
+  TwitterLogo,
+  LinkedinLogo,
+  EnvelopeSimpleOpen,
+  DiscordLogo,
+} from "@phosphor-icons/react";
 
 export const SingleArticle = ({ author, image, category, title, children }) => {
   return (
-    // <div className='px-4 py-24'>
-    //   <div className='mx-auto max-w-prose'>
-    //     <p className='block text-center text-base font-semibold uppercase tracking-wide text-indigo-600'>
-    //       {category}
-    //     </p>
-    //     <h1 className='mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl'>
-    //       {title}
-    //     </h1>
-    //     <br />
-    // <Image
-    //   className='lg:h-48 md:h-36 w-full object-cover object-center'
-    //   src={image}
-    //   width={720}
-    //   height={400}
-    //   alt='blog'
-    // />
-    //     <hr />
-    //     <br />
-    //     <div className='flex items-center'>
-    //       <Image src={author.image} width={50} height={50} alt='blog' />
-
-    //       <div>
-    //         <strong>{author.name}</strong>
-    //         <br />
-    //         <span>Technical advisor</span>
-    //       </div>
-    //     </div>
-    //     <article className='mx-autotext-gray-500 prose-md prose prose-indigo py-24 lg:prose-lg'>
-    //       {children}
-    //     </article>
-    //   </div>
-    // </div>
     <article
-      className="px-4 py-24 mx-auto max-w-7xl"
-      itemID="#"
-      itemScope
-      itemType="http://schema.org/BlogPosting"
+      class="px-4 py-24 mx-auto max-w-7xl"
+      itemid="#"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
     >
-      <div className="w-full mx-auto mb-12 text-left">
+      <div class="w-full mx-auto mb-10 text-left md:w-3/4 lg:w-1/2">
+        <div class="pb-6 mb-6 border-b border-gray-200">
+          <h1
+            class="mb-3 text-3xl font-bold text-gray-900 md:leading-tight md:text-4xl"
+            itemprop="headline"
+          >
+            {title}
+          </h1>
+          <p class="text-base text-gray-500">
+            January 18, 2021 — Written by {author.name}
+          </p>
+        </div>
+        <nav className="mt-2 flex items-center space-x-3">
+          <Link
+            passHref={true}
+            href="#"
+            className="rounded-lg bg-gray-100 p-1 text-gray-500 transition hover:bg-primary-light hover:text-primary"
+          >
+            <TwitterLogo size={48} color="#ff007f" weight="duotone" />
+          </Link>
+          <Link
+            passHref={true}
+            href="#"
+            className="rounded-lg bg-gray-100 p-1 text-gray-500 transition hover:bg-primary-light hover:text-primary"
+          >
+            <LinkedinLogo size={48} color="#ff007f" weight="duotone" />
+          </Link>
+          <Link
+            passHref={true}
+            href="#"
+            className="rounded-lg bg-gray-100 p-1 text-gray-500 transition hover:bg-primary-light hover:text-primary"
+          >
+            <EnvelopeSimpleOpen size={48} color="#ff007f" weight="duotone" />
+          </Link>
+          <Link
+            passHref={true}
+            href="#"
+            className="rounded-lg bg-gray-100 p-1 text-gray-500 transition hover:bg-primary-light hover:text-primary"
+          >
+            <DiscordLogo size={48} color="#ff007f" weight="duotone" />
+          </Link>
+        </nav>
         <Image
-          className="lg:h-48 md:h-36 w-full object-cover object-center"
+          className="lg:h-64 md:h-36 w-full object-cover object-center"
           src={image}
           width={720}
           height={400}
           alt="blog"
         />
-        <p className="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">
-          {" "}
-          {category}
-        </p>
-        <h1
-          className="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl"
-          itemProp="headline"
-          title="Rise of Tailwind - A Utility First CSS Framework"
-        >
-          {title}
-        </h1>
-        <div className="flex mb-6 space-x-2">
-          <a
-            className="text-gray-900 bg-gray-100 badge hover:bg-gray-200"
-            href="#"
-          >
-            CSS
-          </a>
-          <a
-            className="text-gray-900 bg-gray-100 badge hover:bg-gray-200"
-            href="#"
-          >
-            Tailwind
-          </a>
-          <a
-            className="text-gray-900 bg-gray-100 badge hover:bg-gray-200"
-            href="#"
-          >
-            AlpineJS
-          </a>
-        </div>
-        <a className="flex items-center text-gray-700" href="#">
-          <div className="avatar">
-            <img src="/placeholder.jpg" alt="Photo of Praveen Juge" />
-          </div>
-          <div className="ml-2">
-            <p className="text-sm font-semibold text-gray-800">Praveen Juge</p>
-            <p className="text-sm text-gray-500">Jan 02 2021</p>
-          </div>
-        </a>
       </div>
 
-      <div className="w-full mx-auto prose md:w-3/4 lg:w-1/2">{children}</div>
+      <div class="w-full mx-auto prose max-w-7xl">{children}</div>
     </article>
   );
 };
