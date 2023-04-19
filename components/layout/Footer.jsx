@@ -17,7 +17,12 @@ const Footer = () => {
       <div className="mx-auto flex w-full items-center justify-between px-1 py-4">
         <Link href="/" passHref={true}>
           <div className="xpace-x-3 inline-flex items-center">
-            <Image src={beaker} height={50} width={50} alt="logo" />
+            <Image
+              src={beaker}
+              height={50}
+              width={50}
+              alt="edndacomputer logo"
+            />
             <span className={`text-2xl font-extralight text-primary`}>
               edndacomputer{" "}
             </span>
@@ -55,9 +60,9 @@ const Footer = () => {
         </nav>
       </div>
       <div>
-        <nav className="mx-auto mt-2 flex w-full flex-row items-center justify-between text-xs font-medium text-gray-500">
+        <nav className="mx-auto mt-1 flex w-full flex-row items-center justify-between text-xs font-medium text-gray-500">
           <span>© 2022, edndacomputer. All Rights Reserved.</span>
-          <span>
+          <span className="flex flex-row space-x-3">
             <Link href="#" className="hover:text-primary-light">
               Privacy
             </Link>
