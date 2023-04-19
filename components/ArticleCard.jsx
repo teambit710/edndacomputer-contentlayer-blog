@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, Calendar, Books } from "@phosphor-icons/react";
 
 export default function ArticleCard({
   title,
@@ -12,7 +13,7 @@ export default function ArticleCard({
   readingTime,
 }) {
   return (
-    <div className="dark:bg-gray-800 dark:text-gray-50 flex flex-row rounded-lg overflow-hidden">
+    <div className="dark:bg-gray-100 dark:text-gray-900 flex flex-row rounded-lg overflow-hidden shadow-lg">
       <Image
         className="lg:h-48 md:h-36 w-full object-cover object-center "
         src={image}
@@ -20,55 +21,46 @@ export default function ArticleCard({
         height={400}
         alt="blog"
       />
-      <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
+      <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-4">
         <div className="flex justify-start">
-          <span className="px-2 py-1 text-xs rounded-full dark:bg-green-400 dark:text-gray-900">
-            Label
+          <span class="bg-blue-100 text-primary-dark text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-primary dark:text-gray-50">
+            {category}
           </span>
         </div>
-        <h1 className="text-3xl font-semibold">Lorem ipsum dolor sit.</h1>
-        <p className="flex-1 pt-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-          reprehenderit adipisci tempore voluptas laborum quod.
-        </p>
-        <a
+        <h1 className="text-3xl font-semibold"> {title}</h1>
+        <p className="flex-1 pt-2">{description}</p>
+        <Link
           rel="noopener noreferrer"
-          href="#"
-          className="inline-flex items-center pt-2 pb-6 space-x-2 text-sm dark:text-green-400"
+          href={`/article/${slug}`}
+          className="inline-flex items-center pt-2 pb-6 space-x-2 text-sm"
         >
-          <span>Read more</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="w-4 h-4"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
-        </a>
+          <div className="inline-flex items-center space-x-1">
+            <span className="text-xl text-primary-light">Read more</span>
+            <ArrowRight size={48} color="#ff66b3" weight="duotone" />
+          </div>
+        </Link>
         <div className="flex items-center justify-between pt-2">
           <div className="flex space-x-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="w-5 h-5 dark:text-gray-400"
-            >
-              <path
-                fillRule="evenodd"
-                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-            <span className="self-center text-sm">by Leroy Jenkins</span>
+            <div class="relative flex h-10 w-10 shrink-0 select-none items-center justify-center rounded-full bg-transparent text-sm font-bold uppercase text-gray-800">
+              <img
+                class="h-full w-full rounded-full object-cover object-center ring-2 ring-transparent dark:ring-primary-light p-0.5"
+                src={"/images/avatar.jpg"}
+              />
+            </div>
+            <div className="flex flex-col pl-2">
+              <span className="self-center text-sm">by edndacomputer</span>
+              <span className="self-center text-sm inline-flex space-x-2">
+                <Calendar size={32} color="#ff66b3" weight="duotone" />
+                <div>{dateTime}</div>
+              </span>
+            </div>
           </div>
-          <span className="text-xs">3 min read</span>
+
+          <span className="text-xs">
+            <Books size={48} color="#ff66b3" weight="duotone" />
+            <span className="text-xs">{readingTime}</span>
+          </span>
         </div>
-        {/* </div> */}
       </div>
     </div>
   );
