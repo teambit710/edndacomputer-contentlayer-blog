@@ -62,7 +62,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="flex justify-between space-y-8">
-        <nav className="text-xs text-gray-500 flex flex-col justify-between md:flex-row mx-auto items-center">
+        <nav className="text-xs text-gray-500 flex flex-col justify-between sm:flex-row mx-auto items-center">
           <span>© 2023 edndacomputer</span>
           <DotOutline
             size={48}

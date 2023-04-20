@@ -30,8 +30,8 @@ export const Form = () => {
   };
 
   return (
-    <section className="py-6 bg-white text-gray-900">
-      <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+    <section className=" bg-white text-gray-900 py-12 md:py-24">
+      <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x ">
         <div className="rounded-lg shadow-lg py-6 md:py-0 md:px-6 bg-gray-300 p-4 flex-col flex items-center justify-center">
           <h1 className="text-4xl font-bold">Get in touch</h1>
           <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
