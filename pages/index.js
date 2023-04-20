@@ -8,7 +8,7 @@ export default function Home({ articles }) {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>edndacomputer | website </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
