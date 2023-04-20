@@ -16,7 +16,7 @@ export default function ArticleCard({
     <section className="py-6">
       <div className="dark:bg-gray-100 dark:text-gray-900 flex flex-row rounded-lg overflow-hidden shadow-lg">
         <Image
-          className="lg:h-48 md:h-36 w-full object-cover object-center "
+          className="lg:h-48 md:h-36 w-full object-cover object-center hidden md:block"
           src={image}
           width={720}
           height={400}
@@ -28,16 +28,9 @@ export default function ArticleCard({
               {category}
             </span>
           </div>
-          <h1 className="text-3xl font-semibold"> {title}</h1>
+          <h1 className="md:text-3xl text-xl font-semibold"> {title}</h1>
           <p className="flex-1 pt-2">{description}</p>
-          <Link
-            rel="noopener noreferrer"
-            href={`/article/${slug}`}
-            className="inline-flex items-center pt-2 pb-6 space-x-2 text-sm underline
-        decoration-yellow-500 decoration-[0.25rem]
-        motion-safe:transition-all motion-safe:duration-200
-        hover:decoration-[0.5rem] focus:decoration-[0.5rem] hover:decoration-yellow-500/50 focus:decoration-yellow-500/50"
-          >
+          <Link rel="noopener noreferrer" href={`/article/${slug}`}>
             <div className="inline-flex items-center space-x-1">
               <span className="text-xl text-primary-light">Read more</span>
               <ArrowRight size={48} color="#ff66b3" weight="duotone" />
@@ -61,7 +54,12 @@ export default function ArticleCard({
               </div>
             </div>
             <span className="text-xs">
-              <Books size={48} color="#ff66b3" weight="duotone" />
+              <Books
+                size={48}
+                color="#ff66b3"
+                weight="duotone"
+                className="hidden md:block"
+              />
               <span className="text-xs">{readingTime}</span>
             </span>
           </div>

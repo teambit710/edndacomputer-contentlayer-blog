@@ -10,7 +10,7 @@ const Nav = () => {
     { path: "/contact", label: "Contact" },
   ];
   return (
-    <nav className="container mx-auto flex justify-around bg-white py-8">
+    <nav className="flex justify-around bg-white py-8">
       <div className="flex space-x-4">
         {links.map(({ path, label }) => (
           <Link key={path} href={path} passHref>

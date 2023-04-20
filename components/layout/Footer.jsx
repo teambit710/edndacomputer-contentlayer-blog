@@ -7,14 +7,15 @@ import {
   LinkedinLogo,
   EnvelopeSimpleOpen,
   DiscordLogo,
+  DotOutline,
 } from "@phosphor-icons/react";
 
 import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full">
-      <div className="mx-auto flex w-full items-center justify-between px-1 py-4">
+    <div>
+      <div className="flex flex-col md:flex-row md:justify-between">
         <Link href="/" passHref={true}>
           <div className="xpace-x-3 inline-flex items-center">
             <Image
@@ -24,11 +25,12 @@ const Footer = () => {
               alt="edndacomputer logo"
             />
             <span className={`text-2xl font-extralight text-primary`}>
-              edndacomputer{" "}
+              edndacomputer
             </span>
           </div>
         </Link>
-        <nav className="mt-2 flex items-center space-x-3">
+
+        <nav className="mt-2 flex items-center justify-between md:space-x-4">
           <Link
             passHref={true}
             href="#"
@@ -59,20 +61,33 @@ const Footer = () => {
           </Link>
         </nav>
       </div>
-      <div>
-        <nav className="mx-auto mt-1 flex w-full flex-row items-center justify-between text-xs font-medium text-gray-500">
-          <span>© 2022, edndacomputer. All Rights Reserved.</span>
-          <span className="flex flex-row space-x-3">
-            <Link href="#" className="hover:text-primary-light">
-              Privacy
-            </Link>
-            <Link href="#" className="hover:text-primary-light">
-              Terms
-            </Link>
-          </span>
+      <div className="flex justify-between space-y-8">
+        <nav className="text-xs text-gray-500 flex flex-col justify-between md:flex-row mx-auto items-center">
+          <span>© 2023 edndacomputer</span>
+          <DotOutline
+            size={48}
+            color="#ff66b3"
+            weight="duotone"
+            className="hidden md:block"
+          />
+          <span>All Rights Reserved</span>
+          <DotOutline
+            size={48}
+            color="#ff66b3"
+            weight="duotone"
+            className="hidden md:block"
+          />
+          <span>Terms + Conditions</span>
+          <DotOutline
+            size={48}
+            color="#ff66b3"
+            weight="duotone"
+            className="hidden md:block"
+          />
+          <span>Privacy</span>
         </nav>
       </div>
-    </footer>
+    </div>
   );
 };
 

@@ -5,21 +5,25 @@ import Nav from "./Nav";
 const Header = () => {
   return (
     <header
-      className={`mx-auto my-1 flex w-full flex-row items-center justify-between px-3`}
+      className={`mx-auto my-1 flex w-full flex-col md:flex-col items-center justify-between px-3`}
     >
-      <div className={`flex flex-row items-center`}>
-        <Image
-          src="/images/beaker.png"
-          alt="beaker"
-          width={80}
-          height={80}
-          objectFit={`cover`}
-        />
+      <div>
+        <div className={`flex flex-col items-center`}>
+          <Image
+            src="/images/beaker.png"
+            alt="beaker"
+            width={80}
+            height={80}
+            objectFit={`cover`}
+          />
+        </div>
+        <span className={`mx-2 text-xl md:text-4xl font-thin text-primary`}>
+          edndacomputer{" "}
+        </span>
       </div>
-      <span className={`mx-2 text-4xl font-thin text-primary`}>
-        edndacomputer{" "}
-      </span>
-      <Nav />
+      <div>
+        <Nav />
+      </div>
     </header>
   );
 };
