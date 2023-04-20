@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Space+Mono&display=swap");
 /* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
-  font-family: Lobster;
+  font-family: "Space Mono", monospace;
 }
