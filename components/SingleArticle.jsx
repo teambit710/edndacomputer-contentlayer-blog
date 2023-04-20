@@ -11,9 +11,12 @@ import {
 export const SingleArticle = ({ author, image, category, title, children }) => {
   return (
     <article className="px-4 py-24 mx-auto max-w-7xl">
-      <div className="w-full mx-auto mb-10 text-left w-4/5">
+      <div className="w-full mx-auto mb-10 text-left">
         <div className="pb-6 mb-6 border-b border-gray-200">
-          <h1 className="mb-3 text-3xl font-bold text-gray-900 md:leading-tight md:text-4xl"s>
+          <h1
+            className="mb-3 text-3xl font-bold text-gray-900 md:leading-tight md:text-4xl"
+            s
+          >
             {title}
           </h1>
           <p className="text-base text-gray-500">
