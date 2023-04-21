@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@hookform/resolvers": "^3.1.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "autoprefixer": "^10.4.7",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.0",
